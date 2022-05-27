@@ -1,16 +1,18 @@
-# riverpodsample
+サンプルプロジェクト。
+RiverPod の動作確認と、Dio の intercepter 機能を使って API のトークン切れを検知してトークンを再発行するロジックを検証するために作成。
 
-A new Flutter project.
 
-## Getting Started
+対応するサーバーは下記。
+https://github.com/shts/mock-api-server
 
-This project is a starting point for a Flutter application.
+`lib/config.dart` を作成して、起動したサーバーの URL を追加しないと動かないので注意。
 
-A few resources to get you started if this is your first Flutter project:
+```lib/config.dart
+String apiServerBaseUrl =
+    "http://~";
+String tokenServerBaseUrl =
+    "http://~";
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
